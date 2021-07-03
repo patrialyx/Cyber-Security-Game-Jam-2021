@@ -6,6 +6,10 @@ public class FlyingBrownie : MonoBehaviour
     Vector3 _initialPosition;
     private bool _brownieWasLaunched;
     private float _timeSittingAround;
+    public GameObject Instruction;
+    public GameObject Instruction1;
+    [SerializeField] private GameObject FailureMessage;
+    float distanceFromCamera = 10f;
 
     [SerializeField] private float _launchPower = 500;
 
@@ -29,8 +33,9 @@ public class FlyingBrownie : MonoBehaviour
         if (transform.position.y < -10||
             _timeSittingAround > 1.5)
         {
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentSceneName);
+            Vector3 centerPos = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, distanceFromCamera));
+            FailureMessage.transform.position = centerPos;
+            FailureMessage.SetActive(true);
         }
 
     }
@@ -41,6 +46,11 @@ public class FlyingBrownie : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.red;
             GetComponent<LineRenderer>().enabled = true;
+            Instruction = GameObject.Find("Instruction");
+            Destroy(this.Instruction);
+            Instruction1 = GameObject.Find("Instruction (1)");
+            Destroy(this.Instruction1);
+
         }
     }
 

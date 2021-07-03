@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Introduction_password_hacking.unity
+    guid: 2f11d73587500ed488985671dd0141a7
+  - enabled: 1
+    path: Assets/Scenes/Introduction_password_spraying.unity
+    guid: 957a39e177605c045a0f146387e9988a
+  - enabled: 1
+    path: Assets/Scenes/Password_Spraying_1.unity
+    guid: 41e5a85923a267645b58ea23d8a886a7
+  - enabled: 1
+    path: Assets/Scenes/Password_Spraying_2.unity
+    guid: 42ea9ea3e23e2ac44b57e1f9f0ce93f1
   m_configObjects: {}
