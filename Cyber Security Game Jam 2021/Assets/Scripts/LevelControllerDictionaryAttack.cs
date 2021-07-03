@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelController : MonoBehaviour
+public class LevelControllerDictionaryAttack : MonoBehaviour
 {
     [SerializeField] private GameObject SuccessMessage;
     [SerializeField] private GameObject FailureMessage;
@@ -46,11 +46,11 @@ public class LevelController : MonoBehaviour
     public void tryAgain()
     {
         FlyingBrownie.SetActive(true);
-        SceneManager.LoadScene("Password_Spraying_1");
+        SceneManager.LoadScene("Dictionary_Attack_1");
     }
 
     public void nextLevel()
     {
-        SceneManager.LoadScene("Password_Spraying_2");
+        SceneManager.LoadScene("Dictionary_Attack_2");
     }
 }
