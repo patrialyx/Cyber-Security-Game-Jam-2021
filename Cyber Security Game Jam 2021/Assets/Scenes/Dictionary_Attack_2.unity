@@ -43151,7 +43151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889548206}
-  m_LocalRotation: {x: 0, y: -1e-45, z: 0, w: 1}
+  m_LocalRotation: {x: 1.5777218e-30, y: 3e-45, z: 0, w: 1}
   m_LocalPosition: {x: -0.18604755, y: 1.8399999, z: -10.1767}
   m_LocalScale: {x: 4.7, y: 4.7, z: 4.7}
   m_Children: []
@@ -45768,6 +45768,7 @@ GameObject:
   - component: {fileID: 1811581329}
   - component: {fileID: 1811581331}
   - component: {fileID: 1811581332}
+  - component: {fileID: 1811581333}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -63475,6 +63476,27 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!50 &1811581333
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811581327}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 479e535311653e041aa02ee0ea6e920d, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1851925011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63895,7 +63917,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981323427}
-  m_LocalRotation: {x: 0, y: -1e-45, z: 0, w: 1}
+  m_LocalRotation: {x: 1.5777218e-30, y: 3e-45, z: -0, w: 1}
   m_LocalPosition: {x: -0.18604755, y: 1.8399999, z: -10.1767}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
