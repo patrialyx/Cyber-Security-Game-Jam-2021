@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324c4ed3fa02a864d80335f154bd50cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.05
+  typingSpeed: 0.01
   hostDialogueText: {fileID: 1628253254}
   hostDialogueSentences:
   - The second technique is dictionary attack.
@@ -681,11 +681,6 @@ MonoBehaviour:
     of targets would be "knicksfan2020", "newyorkknicks1234".
   - With this knowledge, you will now take on the role of a hacker and find the most
     vulnerable password that can be attacked with Dictionary Attack given the context!
-  - You will be given a flying bat as seen on the left. Below, there are multiple
-    golden keys. Each golden key is tagged to a password which lies on top of the
-    key.
-  - Based on the context given, aim the flying bat at the key with the password which
-    you think is the most vulnerable to Dictionary Attack.
   - Let's go!
   hostContinueButton: {fileID: 1211240854}
 --- !u!1 &339400126
