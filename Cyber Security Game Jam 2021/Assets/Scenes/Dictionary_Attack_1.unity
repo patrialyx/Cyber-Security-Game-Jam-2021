@@ -42860,12 +42860,12 @@ PrefabInstance:
     - target: {fileID: 3831960651224773632, guid: d3861ab92b1e803409dc22c9687ef357,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5694338
+      value: 0.5053725
       objectReference: {fileID: 0}
     - target: {fileID: 3831960651224773632, guid: d3861ab92b1e803409dc22c9687ef357,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3755392
+      value: 0.886578
       objectReference: {fileID: 0}
     - target: {fileID: 3831960651224773632, guid: d3861ab92b1e803409dc22c9687ef357,
         type: 3}
@@ -42882,7 +42882,7 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Drag to shoot!
 
-        Context: America'
+        Context of password: America'
       objectReference: {fileID: 0}
     - target: {fileID: 3831960651224773633, guid: d3861ab92b1e803409dc22c9687ef357,
         type: 3}
