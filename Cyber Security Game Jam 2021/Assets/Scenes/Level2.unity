@@ -354,7 +354,18 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1340624805}
+        m_MethodName: ReadStringInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -644,6 +655,7 @@ GameObject:
   - component: {fileID: 1340624804}
   - component: {fileID: 1340624803}
   - component: {fileID: 1340624802}
+  - component: {fileID: 1340624805}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -716,6 +728,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1340624805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340624801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d5bd8cfadd59b4884e25be595099c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pwdStorage: []
+  inputField: {fileID: 1274406097}
+  inputFieldElement: {fileID: 508610144}
+  isStrongPwd: 0
+  hasCommonWord: 0
 --- !u!1 &1761251173
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +757,6 @@ GameObject:
   - component: {fileID: 1761251177}
   - component: {fileID: 1761251176}
   - component: {fileID: 1761251175}
-  - component: {fileID: 1761251174}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -736,22 +764,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1761251174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761251173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d5bd8cfadd59b4884e25be595099c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  password: 
-  pwdStorage: []
-  inputField: {fileID: 1274406097}
-  inputFieldColor: {fileID: 508610144}
 --- !u!114 &1761251175
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene1.1.unity
     guid: 880712899cfd2f943a4805273ecfd254
   - enabled: 1
-    path: Assets/Scenes/Scene1.2.unity
+    path: Assets/Scenes/Password_Spraying_1.unity
     guid: 41e5a85923a267645b58ea23d8a886a7
   - enabled: 1
     path: Assets/Scenes/Level1.unity
@@ -29,4 +29,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterMaking.unity
     guid: 5c9f0e7b318ff87419f15260e61c63fa
+  - enabled: 1
+    path: Assets/Scenes/Password_Spraying_2.unity
+    guid: 42ea9ea3e23e2ac44b57e1f9f0ce93f1
+  - enabled: 1
+    path: Assets/Scenes/Introduction_password_spraying.unity
+    guid: 957a39e177605c045a0f146387e9988a
+  - enabled: 1
+    path: Assets/Scenes/GameRoom 1.unity
+    guid: 9df1e70f96a0f9840a0799f951c3b863
+  - enabled: 1
+    path: Assets/Scenes/Introduction_password_hacking.unity
+    guid: 2f11d73587500ed488985671dd0141a7
+  - enabled: 1
+    path: Assets/Scenes/Introduction_dictionary_attack.unity
+    guid: e37cc9522d74a4046ad06ee036bc8982
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: c54ecda2923fa4e4ea72f4691efefa31
+  - enabled: 1
+    path: Assets/Scenes/Dictionary_Attack_1.unity
+    guid: a49a9b3739f48a444922bbc6a3c609bb
+  - enabled: 1
+    path: Assets/Scenes/Dictionary_Attack_2.unity
+    guid: 64c3945b3854d9249aace01f4c5b7dc1
   m_configObjects: {}

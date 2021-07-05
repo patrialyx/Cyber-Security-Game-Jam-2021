@@ -32,6 +32,9 @@ public class SelectorHandler4:MonoBehaviour
     private Button closeButton;
     [SerializeField]
     private GameObject CommonButtonsCanvas;
+    [SerializeField]
+    private GameObject backButton;
+    
 
     public void Start()
     {
@@ -182,6 +185,7 @@ public class SelectorHandler4:MonoBehaviour
         maliciousCorrect.SetActive(false);
         maliciousKindaCorrect.SetActive(false);
         CommonButtonsCanvas.SetActive(false);
+        backButton.SetActive(true);
     }
     public static bool checkEquality<T>(T[] first, T[] second) {
         return Enumerable.SequenceEqual(first, second);

@@ -5,8 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform player;
-    // [SerializeField]
-    // public float offset;
+
     [SerializeField]
     private float leftLimit;
     [SerializeField]

@@ -92,12 +92,10 @@ public class MainCharacterMovement : MonoBehaviour
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, whatIsLadder);
 
         if (hitInfo.collider!=null){
-            Debug.Log("hit is no null");
             if(Input.GetKeyDown(KeyCode.UpArrow)){
                 isClimbing = true;
             }
         } else{
-            Debug.Log("hit is null");
             isClimbing = false;
         }
         if (isClimbing == true){
