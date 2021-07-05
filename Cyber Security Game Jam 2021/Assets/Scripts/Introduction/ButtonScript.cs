@@ -11,7 +11,7 @@ public class ButtonScript : MonoBehaviour
     public Rigidbody2D character;
     public void NewGame() {
         StartCoroutine(LoadScene());
-        // SceneManager.LoadScene("GameRoom");
+        // SceneManager.LoadScene("GameRoom1");
     }
 
     IEnumerator LoadScene(){
