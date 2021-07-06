@@ -5803,7 +5803,8 @@ MonoBehaviour:
     height: 939.1903
   selectedBlocks:
   - {fileID: 1690736506}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1690736502}
   variables: []
   description: 'This scene shows how to create simple parallax scrolling effects
 
