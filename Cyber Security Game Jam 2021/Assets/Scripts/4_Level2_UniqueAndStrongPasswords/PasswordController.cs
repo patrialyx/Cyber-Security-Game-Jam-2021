@@ -336,55 +336,69 @@ public class PasswordController : MonoBehaviour
         }
         else
         {
-            pwdInputField.SetActive(true);
-            inputField.SetActive(true);
-            errMsg.text ="";
-            errMsg.color = Color.white;
-            inputFieldElement.ActivateInputField();
-            inputFieldElement.text ="";
-            isStrongPwd = false;
+            if (other.gameObject.name == "button (1)")
+            { 
+                machineNumber = 1;
+                afterActionSettings();
+                
+            }
+            else if (other.gameObject.name == "button (2)")
+            {
+                machineNumber = 2;
+                afterActionSettings();
+            }
+            else if (other.gameObject.name == "button (3)")
+            {
+                machineNumber = 3;
+                afterActionSettings();
+            }
+            else if (other.gameObject.name == "button (4)")
+            {
+                machineNumber = 4;
+                afterActionSettings();
+            }
+            else if (other.gameObject.name == "button (5)")
+            {
+                machineNumber = 5;
+                afterActionSettings();
+            }
+            else if (other.gameObject.name == "button (6)")
+            {
+                machineNumber = 6;
+                afterActionSettings();
+            }
+            else if (other.gameObject.name == "button (7)")
+            {
+                machineNumber = 7;
+                afterActionSettings();
+            }
+            else if (other.gameObject.name == "button (8)")
+            {
+                machineNumber = 8;
+                afterActionSettings();
+            }
+            else if (other.gameObject.name == "button (9)")
+            {
+                machineNumber = 9;
+                afterActionSettings();
+            }
+            else if (other.gameObject.name == "button (10)")
+            {
+                machineNumber = 10;
+                afterActionSettings();
+            }
         }
-        if (other.gameObject.name == "button (1)")
-        { 
-            machineNumber = 1;
-        }
-        else if (other.gameObject.name == "button (2)")
-        {
-            machineNumber = 2;
-        }
-        else if (other.gameObject.name == "button (3)")
-        {
-            machineNumber = 3;
-        }
-        else if (other.gameObject.name == "button (4)")
-        {
-            machineNumber = 4;
-        }
-        else if (other.gameObject.name == "button (5)")
-        {
-            machineNumber = 5;
-        }
-        else if (other.gameObject.name == "button (6)")
-        {
-            machineNumber = 6;
-        }
-        else if (other.gameObject.name == "button (7)")
-        {
-            machineNumber = 7;
-        }
-        else if (other.gameObject.name == "button (8)")
-        {
-            machineNumber = 8;
-        }
-        else if (other.gameObject.name == "button (9)")
-        {
-            machineNumber = 9;
-        }
-        else if (other.gameObject.name == "button (10)")
-        {
-            machineNumber = 10;
-        }
+        
     }
-
+    private void afterActionSettings()
+    {
+        pwdInputField.SetActive(true);
+        inputField.SetActive(true);
+        errMsg.text ="";
+        errMsg.color = Color.white;
+        inputFieldElement.ActivateInputField();
+        inputFieldElement.text ="";
+        isStrongPwd = false;
+    }
 }
 
