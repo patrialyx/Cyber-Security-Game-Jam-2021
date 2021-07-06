@@ -5525,9 +5525,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 366.58322
-    y: 63.927116
-    width: 80
+    x: 361.58322
+    y: 56.927116
+    width: 75
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5578,7 +5578,8 @@ MonoBehaviour:
     y: -350
     width: 1241.8625
     height: 939.1903
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 1815667974}
   selectedCommands: []
   variables: []
   description: 'This scene shows how to create simple parallax scrolling effects
