@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2a_GameRoomPt2.unity
     guid: f4d38f025e9f38b46b0fa53ae8fd98a1
+  - enabled: 1
+    path: Assets/Scenes/2a_GameRoomPt3.unity
+    guid: fedaff07962304349b016e9e08c37d4e
   m_configObjects: {}
