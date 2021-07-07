@@ -77,63 +77,63 @@ public class PasswordController1 : MonoBehaviour
                 switch (machineNumber)
                 {
                     case 1:
-                        door[0].SetActive(true);
+                        door[0].SetActive(false);
                         // shieldAnim[0].SetBool(boolstr, true);
                         shield[9].SetActive(true);
                         shield[0].SetActive(false);
                         break;
                     case 2:
-                        door[1].SetActive(true);
+                        door[1].SetActive(false);
                         // shieldAnim[1].SetBool(boolstr+"1", true);
                         shield[0].SetActive(true);
                         shield[1].SetActive(false);
                         break;
                     case 3:
-                        door[2].SetActive(true);
+                        door[2].SetActive(false);
                         // shieldAnim[2].SetBool(boolstr+"2", true);
                         shield[1].SetActive(true);
                         shield[2].SetActive(false);
                         break;
                     case 4:
-                        door[3].SetActive(true);
+                        door[3].SetActive(false);
                         // shieldAnim[3].SetBool(boolstr+"3", true);
                         shield[2].SetActive(true);
                         shield[3].SetActive(false);
                         break;
                     case 5:
-                        door[4].SetActive(true);
+                        door[4].SetActive(false);
                         gateAnim[0].SetBool("playMovingUp", true);
                         // shieldAnim[4].SetBool(boolstr+"4", true);
                         shield[3].SetActive(true);
                         shield[4].SetActive(false);
                         break;
                     case 6:
-                        door[5].SetActive(true);
+                        door[5].SetActive(false);
                         // shieldAnim[5].SetBool(boolstr+"5", true);
                         shield[4].SetActive(true);
                         shield[5].SetActive(false);
                         break;
                     case 7:
-                        door[6].SetActive(true);
+                        door[6].SetActive(false);
                         // shieldAnim[6].SetBool(boolstr+"6", true);
                         shield[5].SetActive(true);
                         shield[6].SetActive(false);
                         break;
                     case 8:
-                        door[7].SetActive(true);
+                        door[7].SetActive(false);
                         // shieldAnim[7].SetBool(boolstr+"7", true);
                         shield[6].SetActive(true);
                         shield[7].SetActive(false);
                         break;
                     case 9:
-                        door[8].SetActive(true);
+                        door[8].SetActive(false);
                         // shieldAnim[8].SetBool(boolstr+"8", true);
                         shield[7].SetActive(true);
                         shield[8].SetActive(false);
                         break;
                     case 10:
                         gateAnim[1].SetBool("isPressed", true);
-                        door[9].SetActive(true);
+                        door[9].SetActive(false);
                         shield[8].SetActive(true);
                         shield[9].SetActive(false);
                         break;
