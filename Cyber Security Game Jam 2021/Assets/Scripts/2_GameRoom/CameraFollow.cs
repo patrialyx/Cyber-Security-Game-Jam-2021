@@ -17,6 +17,8 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     Vector2 posOffset;
     [SerializeField]
+    Vector3 playerOffset;
+    [SerializeField]
     float timeOffset;
     // public BoxCollider2D mapBosunds;
 
@@ -26,7 +28,7 @@ public class CameraFollow : MonoBehaviour
 
     void Update(){
         Vector3 startPos = transform.position;
-        Vector3 endPos = player.transform.position;
+        Vector3 endPos = player.transform.position + playerOffset;
         endPos.x += posOffset.x;
         endPos.y += posOffset.y;
         endPos.z = -10;
