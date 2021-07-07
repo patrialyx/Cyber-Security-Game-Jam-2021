@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class springController : MonoBehaviour
 {
-    public float thrust = 20.0f;
+    public float thrust;
     public Rigidbody2D _rigidbody;
     // Start is called before the first frame update
     

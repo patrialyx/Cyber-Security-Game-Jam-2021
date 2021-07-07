@@ -992,7 +992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34206566}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 29.75, y: 13.890001, z: 0}
+  m_LocalPosition: {x: 29.75, y: 13.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 841942901}
@@ -10313,8 +10313,7 @@ MonoBehaviour:
     height: 939.1903
   selectedBlocks:
   - {fileID: 373771212}
-  selectedCommands:
-  - {fileID: 373771209}
+  selectedCommands: []
   variables: []
   description: 'This scene shows how to create simple parallax scrolling effects
 
@@ -17932,8 +17931,8 @@ MonoBehaviour:
   typingSpeed: 0.05
   hostDialogueText: {fileID: 1918548052}
   hostDialogueSentences:
-  - So, I see you have managed to rid yourself of those ghosts.
-  - Along the way, you have also acquired the skills to make a good password.
+  - What a close shave! You managed to close the roof shield in time.
+  - I guess you also learned to form strong and unique passwords across the machines.
   - Good job, John. Have a good night's rest. The road ahead is filled with challenges...
   hostContinueButton: {fileID: 415220750}
 --- !u!114 &552084554
@@ -24541,7 +24540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686671643}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 6.5, y: -11.176582, z: 129.4414}
+  m_LocalPosition: {x: 6.5, y: -12.5, z: 129.4414}
   m_LocalScale: {x: 4.6478662, y: 5.760524, z: 0.88046}
   m_Children:
   - {fileID: 431007217}
@@ -32310,7 +32309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878509563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.86, y: -0.03999901, z: -129.4414}
+  m_LocalPosition: {x: 12.86, y: -1.33, z: -129.4414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 841942901}
@@ -33421,7 +33420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976528772}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 32.647526, y: 0.7434187, z: 129.4414}
+  m_LocalPosition: {x: 32.647526, y: 0.53, z: 129.4414}
   m_LocalScale: {x: 4.6478662, y: 5.760524, z: 0.88046}
   m_Children:
   - {fileID: 1870971875}
@@ -33441,7 +33440,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1034848, y: 0.005758524}
+  m_Offset: {x: -0.07580491, y: 0.005758524}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -33452,7 +33451,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.112054005, y: 0.26816994}
+  m_Size: {x: 0.13235123, y: 0.26816994}
   m_EdgeRadius: 0
 --- !u!212 &976528776
 SpriteRenderer:
@@ -42062,7 +42061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241287390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.5, y: -14.6, z: -10.672571}
+  m_LocalPosition: {x: -24.4, y: -14.6, z: -10.672571}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1938358718}
@@ -42103,7 +42102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d5bd8cfadd59b4884e25be595099c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeholder: {fileID: 2134432882}
   inputField: {fileID: 184736766}
   inputFieldElement: {fileID: 184736768}
   errMsg: {fileID: 674905471}
@@ -42119,17 +42117,6 @@ MonoBehaviour:
   - {fileID: 1830433044}
   - {fileID: 1690946296}
   - {fileID: 791207623}
-  boolstr: isPressedPrevious
-  shieldAnim:
-  - {fileID: 539477700}
-  - {fileID: 996015833}
-  - {fileID: 205631421}
-  - {fileID: 878509567}
-  - {fileID: 786946262}
-  - {fileID: 34206570}
-  - {fileID: 1335504389}
-  - {fileID: 1635301757}
-  - {fileID: 1781726886}
   gateAnim:
   - {fileID: 1072575494}
   - {fileID: 1309861508}
@@ -42146,8 +42133,6 @@ MonoBehaviour:
   - {fileID: 1781726882}
   - {fileID: 1554985254}
   gamePart2_dialogue: {fileID: 2140644690}
-  endGameWin: {fileID: 1206646013}
-  ladder: {fileID: 1339788516}
   endOfPart1: {fileID: 1757677849}
 --- !u!1 &1241567690
 GameObject:
@@ -42377,20 +42362,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d5bd8cfadd59b4884e25be595099c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeholder: {fileID: 0}
   inputField: {fileID: 0}
   inputFieldElement: {fileID: 0}
   errMsg: {fileID: 0}
   mainDoor: {fileID: 0}
   door: []
-  boolstr: 
-  shieldAnim: []
   gateAnim: []
   pwdInputField: {fileID: 0}
   shield: []
   gamePart2_dialogue: {fileID: 0}
-  endGameWin: {fileID: 0}
-  ladder: {fileID: 0}
   endOfPart1: {fileID: 0}
 --- !u!1 &1256983946
 GameObject:
@@ -43906,7 +43886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -39.35, y: -17.15}
+  m_AnchoredPosition: {x: -39.349976, y: -17.150024}
   m_SizeDelta: {x: 78.7011, y: 34.31055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1374010791
@@ -45381,7 +45361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542634601}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 23.687525, y: 0.7434187, z: 129.4414}
+  m_LocalPosition: {x: 23.687525, y: 0.53, z: 129.4414}
   m_LocalScale: {x: 4.6478662, y: 5.760524, z: 0.88046}
   m_Children:
   - {fileID: 2021850925}
@@ -45401,7 +45381,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1034848, y: 0.005758524}
+  m_Offset: {x: -0.07918771, y: 0.005758524}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -45412,7 +45392,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.112054005, y: 0.26816994}
+  m_Size: {x: 0.15264817, y: 0.26816994}
   m_EdgeRadius: 0
 --- !u!212 &1542634605
 SpriteRenderer:
@@ -46368,7 +46348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635301753}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 38.75, y: 13.77, z: 0}
+  m_LocalPosition: {x: 38.75, y: 13.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 841942901}
@@ -50186,7 +50166,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.7997362}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -50197,7 +50177,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 2.56, y: 0.96052754}
   m_EdgeRadius: 0
 --- !u!61 &1870971877
 BoxCollider2D:
@@ -50212,7 +50192,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.6717818}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -50223,7 +50203,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4, y: 1.7}
+  m_Size: {x: 2.4, y: 0.3564365}
   m_EdgeRadius: 0
 --- !u!212 &1870971878
 SpriteRenderer:
@@ -51920,7 +51900,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.479842}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -51931,7 +51911,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 2.56, y: 1.6003159}
   m_EdgeRadius: 0
 --- !u!61 &2021850927
 BoxCollider2D:
@@ -51946,7 +51926,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.3198953}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -51957,7 +51937,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4, y: 1.7}
+  m_Size: {x: 2.4, y: 1.0602094}
   m_EdgeRadius: 0
 --- !u!212 &2021850928
 SpriteRenderer:

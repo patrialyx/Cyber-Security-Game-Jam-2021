@@ -10,9 +10,6 @@ using System.Linq;
 using UnityEngine.SceneManagement;
 public class PasswordController : MonoBehaviour
 {
-    public static PasswordController instance;
-    [SerializeField]
-    public TMP_Text placeholder;
     private string password;
     public GameObject inputField;
     public TMP_InputField inputFieldElement;
@@ -20,18 +17,13 @@ public class PasswordController : MonoBehaviour
     public TMP_Text errMsg;
     public GameObject mainDoor;
     public GameObject[] door;
-    public string boolstr;
-    public Animator[] shieldAnim;
     public Animator[] gateAnim;
     public GameObject pwdInputField;
     public GameObject[] shield;
     private int machineNumber;
     public GameObject gamePart2_dialogue;
-    public GameObject endGameWin;
-    private HashSet<string> hash;
     private List<string> list;
     private string path;
-    [SerializeField] private GameObject ladder;
     [SerializeField] private GameObject endOfPart1;
      public void ReadStringInput(string s)
     {
