@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class goBackToGame : MonoBehaviour
 {
+    [SerializeField]
+    private string sceneToContinue;
     // Start is called before the first frame update
     public void onClick()
     {
-        SceneManager.LoadScene("GameRoom1");
+        SceneManager.LoadScene(sceneToContinue);
     }
 }
