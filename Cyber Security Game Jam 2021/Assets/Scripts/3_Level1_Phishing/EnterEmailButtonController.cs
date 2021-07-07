@@ -10,6 +10,12 @@ public class EnterEmailButtonController : MonoBehaviour
     public Button button3;
     public Button button4;
     public Button button5;
+    public GameObject gbutton1;
+    public GameObject gbutton2;
+    public GameObject gbutton3;
+    public GameObject gbutton4;
+    public GameObject gbutton5;
+    public GameObject gBackCanvas;
     public Button Back;
     public GameObject Home;
     public GameObject Email1;
@@ -17,8 +23,6 @@ public class EnterEmailButtonController : MonoBehaviour
     public GameObject Email3;
     public GameObject Email4;
     public GameObject Email5;
-    public GameObject CommonButtonsCanvas;
-
     public void Onenablede()
     {
         //Register Button Events
@@ -37,8 +41,7 @@ public class EnterEmailButtonController : MonoBehaviour
             //Your code for button 1
             Home.SetActive(false);
             Email1.SetActive(true);
-            CommonButtonsCanvas.SetActive(true);
-            Debug.Log("Clicked: " + button1.name);
+            gbutton1.SetActive(false);
         }
 
         if (buttonPressed == button2)
@@ -46,8 +49,7 @@ public class EnterEmailButtonController : MonoBehaviour
             //Your code for button 2
             Home.SetActive(false);
             Email2.SetActive(true);
-            CommonButtonsCanvas.SetActive(true);
-            Debug.Log("Clicked: " + button2.name);
+            gbutton2.SetActive(false);
         }
 
         if (buttonPressed == button3)
@@ -55,8 +57,7 @@ public class EnterEmailButtonController : MonoBehaviour
             //Your code for button 3
             Home.SetActive(false);
             Email3.SetActive(true);
-            CommonButtonsCanvas.SetActive(true);
-            Debug.Log("Clicked: " + button3.name);
+            gbutton3.SetActive(false);
         }
 
 
@@ -65,8 +66,7 @@ public class EnterEmailButtonController : MonoBehaviour
             //Your code for button 4
             Home.SetActive(false);
             Email4.SetActive(true);
-            CommonButtonsCanvas.SetActive(true);
-            Debug.Log("Clicked: " + button4.name);
+            gbutton4.SetActive(false);
         }
 
         if (buttonPressed == button5)
@@ -74,22 +74,19 @@ public class EnterEmailButtonController : MonoBehaviour
             //Your code for button 5
             Home.SetActive(false);
             Email5.SetActive(true);
-            CommonButtonsCanvas.SetActive(true);
-            Debug.Log("Clicked: " + button5.name);
+            gbutton5.SetActive(false);
         }
 
         if (buttonPressed == Back)
         {
             //Your code for button 5
-            Debug.Log("Clickanot");
             Email1.SetActive(false);
             Email2.SetActive(false);
             Email3.SetActive(false);
             Email4.SetActive(false);
             Email5.SetActive(false);
-            CommonButtonsCanvas.SetActive(false);
             Home.SetActive(true);
-            Debug.Log("Clicked: " + button5.name);
+            gBackCanvas.SetActive(false);
         }
     }
 }

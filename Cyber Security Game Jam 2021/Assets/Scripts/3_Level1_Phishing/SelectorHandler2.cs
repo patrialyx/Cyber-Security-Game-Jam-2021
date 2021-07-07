@@ -30,8 +30,13 @@ public class SelectorHandler2:MonoBehaviour
     private GameObject maliciousKindaCorrect;
     [SerializeField]
     private Button closeButton;
+    // [SerializeField]
+    // private Button backButton;
     [SerializeField]
-    private GameObject CommonButtonsCanvas;
+    private GameObject BackButtonsCanvas;
+    [SerializeField]
+
+    private GameObject CloseButtonsCanvas;
 
     public void Start()
     {
@@ -98,6 +103,10 @@ public class SelectorHandler2:MonoBehaviour
         closeButton.onClick.AddListener(() => buttonCallBack2());
     }
 
+    // public void disableBackButton(){
+    //     backButton.onClick.AddListener(() => buttonCallBack3());
+    // }
+
     public void buttonCallBack(Button buttonPressed)
     {
         
@@ -128,10 +137,11 @@ public class SelectorHandler2:MonoBehaviour
     }
     public void buttonCallBack1(Button buttonPressed)
     {
+        CloseButtonsCanvas.SetActive(true);
         Debug.Log("buttoncallback1"+buttonPressed.ToString());
-        CommonButtonsCanvas.SetActive(true);
         if (buttonPressed == legitButton)
         {
+            BackButtonsCanvas.SetActive(true);
             legitCanvas.SetActive(true);
         }
         if (buttonPressed == maliciousButton)
@@ -143,10 +153,12 @@ public class SelectorHandler2:MonoBehaviour
             }
             else if (checkEquality(userSelectedList, modelAnswerList))
             {
+                BackButtonsCanvas.SetActive(true);
                 maliciousCorrect.SetActive(true);
             }
             else
             {
+                BackButtonsCanvas.SetActive(true);
                 maliciousKindaCorrect.SetActive(true);
             }
         }
@@ -158,8 +170,12 @@ public class SelectorHandler2:MonoBehaviour
         maliciousWarning.SetActive(false);
         maliciousCorrect.SetActive(false);
         maliciousKindaCorrect.SetActive(false);
-        CommonButtonsCanvas.SetActive(false);
+        CloseButtonsCanvas.SetActive(false);
     }
+
+    // public void buttonCallBack3(){
+    //     BackButtonsCanvas.SetActive(false);
+    // }
     public static bool checkEquality<T>(T[] first, T[] second) {
         return Enumerable.SequenceEqual(first, second);
     }

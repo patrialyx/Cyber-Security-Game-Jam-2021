@@ -31,10 +31,11 @@ public class SelectorHandler4:MonoBehaviour
     [SerializeField]
     private Button closeButton;
     [SerializeField]
-    private GameObject CommonButtonsCanvas;
+    private GameObject BackButtonsCanvas;
     [SerializeField]
-    private GameObject backButton;
-    
+
+    private GameObject CloseButtonsCanvas;
+
 
     public void Start()
     {
@@ -154,10 +155,11 @@ public class SelectorHandler4:MonoBehaviour
     }
     public void buttonCallBack1(Button buttonPressed)
     {
+        CloseButtonsCanvas.SetActive(true);
         Debug.Log("buttoncallback1"+buttonPressed.ToString());
-        CommonButtonsCanvas.SetActive(true);
         if (buttonPressed == legitButton)
         {
+            BackButtonsCanvas.SetActive(true);
             legitCanvas.SetActive(true);
         }
         if (buttonPressed == maliciousButton)
@@ -169,10 +171,12 @@ public class SelectorHandler4:MonoBehaviour
             }
             else if (checkEquality(userSelectedList, modelAnswerList))
             {
+                BackButtonsCanvas.SetActive(true);
                 maliciousCorrect.SetActive(true);
             }
             else
             {
+                BackButtonsCanvas.SetActive(true);
                 maliciousKindaCorrect.SetActive(true);
             }
         }
@@ -184,9 +188,9 @@ public class SelectorHandler4:MonoBehaviour
         maliciousWarning.SetActive(false);
         maliciousCorrect.SetActive(false);
         maliciousKindaCorrect.SetActive(false);
-        CommonButtonsCanvas.SetActive(false);
-        backButton.SetActive(true);
+        CloseButtonsCanvas.SetActive(false);
     }
+
     public static bool checkEquality<T>(T[] first, T[] second) {
         return Enumerable.SequenceEqual(first, second);
     }
