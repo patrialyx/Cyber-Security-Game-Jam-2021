@@ -22,6 +22,7 @@ public class PasswordController : MonoBehaviour
     public GameObject[] shield;
     private int machineNumber;
     public GameObject gamePart2_dialogue;
+    public GameObject timeControl;
     private List<string> list;
     private string path;
     [SerializeField] private GameObject endOfPart1;
@@ -201,6 +202,7 @@ public class PasswordController : MonoBehaviour
         }
         if (other.gameObject.name == "button (11)")
         {
+            timeControl.SetActive(false);
             pwdInputField.SetActive(false);
             gamePart2_dialogue.SetActive(true);
             endOfPart1.SetActive(true);

@@ -56,7 +56,7 @@ public class IntroductionPasswordSprayingManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Password_Spraying_1");
+            SceneManager.LoadScene("6_Password_Spraying_1");
         }
     }
 

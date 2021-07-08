@@ -67,7 +67,7 @@ public class IntroductionPasswordHacking : MonoBehaviour
     public void enterPasswordSpraying()
     {
         Debug.Log("Loading");
-        SceneManager.LoadScene("Introduction_password_spraying");
+        SceneManager.LoadScene("5_Introduction_password_spraying");
         Debug.Log("Done");
     }
 

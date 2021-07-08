@@ -46,14 +46,41 @@ public class MainCharacterMovement : MonoBehaviour
 
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
 
+        Vector3 characterScale = transform.eulerAngles;
+
         if (movement < 0){
-            transform.localScale = new Vector3(-1,1,1);
-            // transform.eulerAngles = new Vector3(0,180,0);
+            characterScale.y = 180;
+            // Debug.Log("moevement: "+movement);
+            // transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            // Debug.Log("localscale:"+transform.position);
+            // // transform.localScale = new Vector2(transform.localScale.x, transform.localScale.y);
+            // // transform.eulerAngles = new Vector3(0,180,0);
+            // // transform.rotation = Quaternion.Euler(transform.rotationx)
+            // // transform.localEulerAngles = transform.eulerAngles + new Vector3(0,180,0);
         }
         else if (movement > 0){
-            transform.localScale = new Vector3(1,1,1);
+            characterScale.y = 0;
             // transform.eulerAngles = new Vector3(0,0,0);
+
+            // Debug.Log("moevement: "+movement);
+            // transform.position = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
+
+            // Debug.Log("localscale:"+transform.position);
+            // // transform.position = transform.position+new Vector3(0, 180, 0);
+            // // transform.localScale = new Vector2(transform.localScale.x, transform.localScale.y);
+            // // transform.eulerAngles = new Vector3(0,0,0);
+            // // transform.localEulerAngles = transform.eulerAngles + new Vector3(0,180,0);
+
         }
+        transform.eulerAngles = characterScale;
+        Debug.Log("eulerAngles:"+transform.eulerAngles);
+
+        // else if (movement > 0){
+        //     // transform.localScale = new Vector3(1,1,1);
+        //     transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+
+            // transform.eulerAngles = new Vector3(0,0,180);
+        // }
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
 
 

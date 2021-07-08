@@ -1,19 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class skipButton : MonoBehaviour
 {
-    [SerializeField] private GameObject dialogue;
-    [SerializeField] private GameObject newDialogue;
-    [SerializeField] private GameObject ladder;
-
+    [SerializeField] private string SceneName;
     public void onClick()
     {
-        //set ladder to appear
-        ladder.SetActive(true);
-        //set dialogue to occur; take the elevator up (non gravitry column)
-        newDialogue.SetActive(false);
-        dialogue.SetActive(false);
+        SceneManager.LoadScene(SceneName);
     }
 }

@@ -287,18 +287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f30f614a2e7c7b4b91525aa0cdee177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.05
-  hostDialogueText: {fileID: 1186111488}
-  hostDialogueSentences:
-  - Congratulations John! That was a tough escape!
-  - If you didn't skip this level, you actually have a really good memory.
-  - Unique and strong passwords are usually really difficult to remember.
-  - You may consider using a password manager for your actual passwords in real life.
-  - Password managers help you generate strong, and unique passwords for all your
-    websites, and automatically logins for you so you don't have to remember passwords.
-  - Now, enter this gravity-defying column to guide you out of this land.
-  - Simply press the up arrow key to move in the column. Safe travels!
-  hostContinueButton: {fileID: 383443574}
 --- !u!114 &77609580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,14 +318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b7f6a3d38bd6343813e20a76d30c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.05
-  hostDialogueText: {fileID: 38158545}
-  hostDialogueSentences:
-  - Oh no, the pipes are faulty! Quick, unlock all the machines to remove the ceiling
-    tiles before you suffocate to death!
-  - 'Hint: you''ve set strong, unique password to all the machines, can you remember
-    all of them?'
-  hostContinueButton: {fileID: 1351711167}
 --- !u!114 &77609582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,19 +330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35949252cf207f449e5ee469d2cbf64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.05
-  hostDialogueText: {fileID: 471312963}
-  hostDialogueSentences:
-  - Unfortunately, you suffocated to death.
-  - Strong, unique passwords are hard to remember, but do they always have to be
-    this way?
-  - 'Use a phrase, or incorporate shortcut codes or acronyms. '
-  - Let me give you an example. 2BoeNot2B_ThatIsThe? (To be or not to be, that is
-    the question - from Shakespeare?)
-  - Good luck now.
-  hostContinueButton: {fileID: 1588315086}
-  restartButton: {fileID: 154607483}
-  skipButton: {fileID: 1195455385}
 --- !u!4 &77609583
 Transform:
   m_ObjectHideFlags: 0
@@ -429,9 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc0f94697fc8a14b92824e6d46fa202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 471312962}
-  door: {fileID: 0}
-  smoke: {fileID: 0}
+  sceneName: 
 --- !u!114 &154607486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1664,7 +1629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &673214527
 Animator:
   serializedVersion: 3
@@ -1937,11 +1902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2122157a82c424c4abe168b344663361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamePart2_dialogue: {fileID: 420995777}
-  smoke: {fileID: 0}
-  timeControl: {fileID: 0}
-  prevDia: {fileID: 420995777}
-  nextDia: {fileID: 732215067}
 --- !u!114 &757811767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2634,9 +2594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6774bc10836454b4386787cf3ba68501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 471312962}
-  newDialogue: {fileID: 1512793517}
-  ladder: {fileID: 0}
+  SceneName: 
 --- !u!114 &1195455388
 MonoBehaviour:
   m_ObjectHideFlags: 0

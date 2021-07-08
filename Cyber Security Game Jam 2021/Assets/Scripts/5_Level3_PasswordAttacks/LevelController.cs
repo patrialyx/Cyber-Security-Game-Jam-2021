@@ -46,11 +46,11 @@ public class LevelController : MonoBehaviour
     public void tryAgain()
     {
         FlyingBrownie.SetActive(true);
-        SceneManager.LoadScene("Password_Spraying_1");
+        SceneManager.LoadScene("6_Password_Spraying_1");
     }
 
     public void nextLevel()
     {
-        SceneManager.LoadScene("Password_Spraying_2");
+        SceneManager.LoadScene("7_Password_Spraying_2");
     }
 }

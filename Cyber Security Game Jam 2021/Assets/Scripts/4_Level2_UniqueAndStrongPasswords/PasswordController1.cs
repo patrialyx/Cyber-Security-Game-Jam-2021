@@ -23,6 +23,7 @@ public class PasswordController1 : MonoBehaviour
     public GameObject[] shield;
     private int machineNumber;
     public GameObject endGameWin;
+    public GameObject timeControl;
     private List<string> list;
     private string path;
     private bool isSet;
@@ -151,6 +152,7 @@ public class PasswordController1 : MonoBehaviour
         }
         if (other.gameObject.name == "button (11)")
         {
+            timeControl.SetActive(false);
             pwdInputField.SetActive(false);
             endGameWin.SetActive(true);
             ladder.SetActive(true);

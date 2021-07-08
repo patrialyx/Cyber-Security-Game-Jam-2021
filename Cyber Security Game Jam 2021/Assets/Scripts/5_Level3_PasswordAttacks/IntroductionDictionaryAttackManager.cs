@@ -56,7 +56,7 @@ public class IntroductionDictionaryAttackManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Dictionary_Attack_1");
+            SceneManager.LoadScene("9_Dictionary_Attack_1");
         }
     }
 

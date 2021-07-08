@@ -46,11 +46,11 @@ public class LevelControllerDictionaryAttack : MonoBehaviour
     public void tryAgain()
     {
         FlyingBrownie.SetActive(true);
-        SceneManager.LoadScene("Dictionary_Attack_1");
+        SceneManager.LoadScene("9_Dictionary_Attack_1");
     }
 
     public void nextLevel()
     {
-        SceneManager.LoadScene("Dictionary_Attack_2");
+        SceneManager.LoadScene("10_Dictionary_Attack_2");
     }
 }
