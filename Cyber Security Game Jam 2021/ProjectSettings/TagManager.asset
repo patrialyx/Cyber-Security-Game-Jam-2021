@@ -10,6 +10,7 @@ TagManager:
   - Ball
   - Bad
   - Good
+  - Music
   layers:
   - Default
   - TransparentFX
