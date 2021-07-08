@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Ground
   - Ball
+  - Bad
+  - Good
+  - Music
   layers:
   - Default
   - TransparentFX
