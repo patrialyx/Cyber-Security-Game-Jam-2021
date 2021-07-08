@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324c4ed3fa02a864d80335f154bd50cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.05
+  typingSpeed: 0.01
   hostDialogueText: {fileID: 1628253254}
   hostDialogueSentences:
   - The second technique is dictionary attack.

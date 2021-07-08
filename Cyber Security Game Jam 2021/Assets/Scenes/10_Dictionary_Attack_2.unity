@@ -43128,7 +43128,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.3867
+  orthographic size: 5.3892474
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -43151,7 +43151,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889548206}
-  m_LocalRotation: {x: 0, y: -1e-45, z: 0, w: 1}
+  m_LocalRotation: {x: 1.5777218e-30, y: 3e-45, z: 0, w: 1}
   m_LocalPosition: {x: -0.18604755, y: 1.8399999, z: -10.1767}
   m_LocalScale: {x: 4.7, y: 4.7, z: 4.7}
   m_Children: []
@@ -45373,7 +45373,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f8a8dc85d6897f048aae1668b8f03625, type: 2}
+  - {fileID: 2100000, guid: 7bda9e6c2aa264a4ab158b27344c4754, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -45395,7 +45395,7 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -6.76, y: 1.16, z: 0}
+  - {x: -7.03, y: 1.46, z: 0}
   - {x: 0.8, y: 2.35, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -63895,7 +63895,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981323427}
-  m_LocalRotation: {x: 0, y: -1e-45, z: 0, w: 1}
+  m_LocalRotation: {x: 1.5777218e-30, y: 3e-45, z: -0, w: 1}
   m_LocalPosition: {x: -0.18604755, y: 1.8399999, z: -10.1767}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
