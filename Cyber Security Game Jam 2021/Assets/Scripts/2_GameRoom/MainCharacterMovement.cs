@@ -73,7 +73,7 @@ public class MainCharacterMovement : MonoBehaviour
 
         }
         transform.eulerAngles = characterScale;
-        Debug.Log("eulerAngles:"+transform.eulerAngles);
+        // Debug.Log("eulerAngles:"+transform.eulerAngles);
 
         // else if (movement > 0){
         //     // transform.localScale = new Vector3(1,1,1);

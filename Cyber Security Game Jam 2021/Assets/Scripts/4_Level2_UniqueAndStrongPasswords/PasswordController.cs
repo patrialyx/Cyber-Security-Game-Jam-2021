@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +14,6 @@ public class PasswordController : MonoBehaviour
     public GameObject inputField;
     public TMP_InputField inputFieldElement;
     private bool isStrongPwd;
-    public TMP_Text errMsg;
     public GameObject mainDoor;
     public GameObject[] door;
     public Animator[] gateAnim;
@@ -23,13 +22,32 @@ public class PasswordController : MonoBehaviour
     private int machineNumber;
     public GameObject gamePart2_dialogue;
     public GameObject timeControl;
-    private List<string> list;
+    public static List<string> list;
     private string path;
     [SerializeField] private GameObject endOfPart1;
+    [SerializeField] private GameObject successfulSet;
+    [SerializeField] private GameObject matchOtherMachine;
+    [SerializeField] private GameObject lowercaseChar;
+    [SerializeField] private GameObject uppercaseChar;
+    [SerializeField] private GameObject oneDigit;
+    [SerializeField] private GameObject specChar;
+    [SerializeField] private GameObject eightChar;
+
+
+    public static PasswordController control;
+
+    // public void Awake(){
+    //     if (control == null){
+    //         DontDestroyOnLoad(gameObject);
+    //         control = this;
+    //     }
+    //     else if (control != this){
+    //         Destroy(gameObject);
+    //     }
+    // }
      public void ReadStringInput(string s)
     {
         password = s;
-        errMsg.text ="";
     }
 
     public void Update()
@@ -38,14 +56,20 @@ public class PasswordController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return)) 
             {
                 Regex rgx = new Regex("[^A-Za-z0-9]");
-                path = Application.dataPath + "/passwordLog.txt";
-                if(!File.Exists(path))
-                {
-                    File.WriteAllText(path, ""); //create the file
+                // path = Application.persistentDataPath + "/passwordLog.txt";
+                // if(!File.Exists(path))
+                // {
+                //     File.WriteAllText(path, ""); //create the file
+                // }
+                // Debug.Log("Application Data Path where - "+Application.persistentDataPath);
+                // list = File.ReadLines(path).ToList();
+                if (list == null){
+                    list = new List<string>();
                 }
-                Debug.Log("Application Data Path where - "+Application.dataPath);
-                list = File.ReadLines(path).ToList();
-                    // hash = new HashSet < string > (list);
+
+                
+                // we need list so to check whether the player key in the same
+
                 if (password.Length >= 8)
                 {
                     if (rgx.IsMatch(password))
@@ -60,14 +84,13 @@ public class PasswordController : MonoBehaviour
                                     {
                                         Debug.Log("so it reach here");
                                         inputFieldElement.image.color = Color.green;
-                                        errMsg.color = Color.green;
-                                        errMsg.text = "You have successfully set the password.";
+                                        setTextActive(1);
                                         isStrongPwd = true;
                                     }
                                     else
                                     {
                                         inputFieldElement.image.color = Color.red;
-                                        errMsg.text = "This password matches the password on another machine. Please use unique passwords!";
+                                        setTextActive(2);
                                         isStrongPwd = false;
                                         Debug.Log("unique");
                                     }
@@ -76,7 +99,7 @@ public class PasswordController : MonoBehaviour
                                 else
                                 {
                                     inputFieldElement.image.color = Color.red;
-                                    errMsg.text = "Weak password. The password must have at least one Lowercase character!";
+                                    setTextActive(3);
                                     isStrongPwd = false;
                                     Debug.Log("lower case char");
                                 }
@@ -84,7 +107,7 @@ public class PasswordController : MonoBehaviour
                             else
                             {
                                 inputFieldElement.image.color = Color.red;
-                                errMsg.text = "Weak password. The password must have at least one Uppercase character!";
+                                setTextActive(4);
                                 isStrongPwd = false;
                                 Debug.Log("uppercase");
                             }
@@ -92,7 +115,7 @@ public class PasswordController : MonoBehaviour
                         else
                         {
                             inputFieldElement.image.color = Color.red;
-                            errMsg.text = "Weak password. The password must have at least one digit!";
+                            setTextActive(5);
                             isStrongPwd = false;
                             Debug.Log("one digit");
                         }
@@ -100,16 +123,15 @@ public class PasswordController : MonoBehaviour
                     else
                         {
                             inputFieldElement.image.color = Color.red;
-                            errMsg.text = "Weak password. The password must have at least one special character!";
+                            setTextActive(6);
                             isStrongPwd = false;
                             Debug.Log("special");
                         }
                 }
                 else
                 {
-                    
-                    inputFieldElement.image.color = Color.red;
-                    errMsg.text = "Weak password. The password must have at least eight characters!";
+                    // inputFieldElement.image.color = Color.red;
+                    setTextActive(7);
                     isStrongPwd = false;
                     Debug.Log("atleast8");
                 }
@@ -117,12 +139,16 @@ public class PasswordController : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Return)) 
             { 
                 Debug.Log("did it reach here first");
-                inputFieldElement.image.color = Color.white;
+                // inputFieldElement.image.color = Color.white;
                 Debug.Log("did it reach here");
                 if (isStrongPwd) // if password passes
                 {
-                    File.AppendAllText(path, password+"\n");
-                    Debug.Log($"woohoo the machine is {machineNumber} ");
+                    // File.AppendAllText(path, password+"\n");
+                    list.Add(password);
+                    // Debug.Log("HIHIHIH"+list.Count);
+                    for(int i=0;i<list.Count;i++){
+                        Debug.Log("the passwords are"+list[i]);
+                    }
                     mainDoor.SetActive(true);
                     inputField.SetActive(false);
                     switch (machineNumber)
@@ -266,11 +292,79 @@ public class PasswordController : MonoBehaviour
     {
         pwdInputField.SetActive(true);
         inputField.SetActive(true);
-        errMsg.text ="";
-        errMsg.color = Color.white;
         inputFieldElement.ActivateInputField();
         inputFieldElement.text ="";
         isStrongPwd = false;
+    }
+
+    private void setTextActive(int option)
+    {
+        switch(option){
+            case 1:
+                successfulSet.SetActive(true);
+                matchOtherMachine.SetActive(false);
+                lowercaseChar.SetActive(false);
+                uppercaseChar.SetActive(false);
+                oneDigit.SetActive(false);
+                specChar.SetActive(false);
+                eightChar.SetActive(false);
+                break;
+            case 2:
+                successfulSet.SetActive(false);
+                matchOtherMachine.SetActive(true);
+                lowercaseChar.SetActive(false);
+                uppercaseChar.SetActive(false);
+                oneDigit.SetActive(false);
+                specChar.SetActive(false);
+                eightChar.SetActive(false);
+                break;
+            case 3:
+                successfulSet.SetActive(false);
+                matchOtherMachine.SetActive(false);
+                lowercaseChar.SetActive(true);
+                uppercaseChar.SetActive(false);
+                oneDigit.SetActive(false);
+                specChar.SetActive(false);
+                eightChar.SetActive(false);
+                break;
+            case 4:
+                successfulSet.SetActive(false);
+                matchOtherMachine.SetActive(false);
+                lowercaseChar.SetActive(false);
+                uppercaseChar.SetActive(true);
+                oneDigit.SetActive(false);
+                specChar.SetActive(false);
+                eightChar.SetActive(false);
+                break;
+            case 5:
+                successfulSet.SetActive(false);
+                matchOtherMachine.SetActive(false);
+                lowercaseChar.SetActive(false);
+                uppercaseChar.SetActive(false);
+                oneDigit.SetActive(true);
+                specChar.SetActive(false);
+                eightChar.SetActive(false);
+                break;
+            case 6:
+                successfulSet.SetActive(false);
+                matchOtherMachine.SetActive(false);
+                lowercaseChar.SetActive(false);
+                uppercaseChar.SetActive(false);
+                oneDigit.SetActive(false);
+                specChar.SetActive(true);
+                eightChar.SetActive(false);
+                break;
+            case 7:
+                successfulSet.SetActive(false);
+                matchOtherMachine.SetActive(false);
+                lowercaseChar.SetActive(false);
+                uppercaseChar.SetActive(false);
+                oneDigit.SetActive(false);
+                specChar.SetActive(false);
+                eightChar.SetActive(true);
+                break;
+        }
+        
     }
 }
 

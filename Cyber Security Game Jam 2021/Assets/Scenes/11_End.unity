@@ -685,7 +685,6 @@ GameObject:
   - component: {fileID: 1663453247}
   - component: {fileID: 1663453252}
   - component: {fileID: 1663453246}
-  - component: {fileID: 1663453245}
   - component: {fileID: 1663453258}
   - component: {fileID: 1663453259}
   m_Layer: 0
@@ -695,33 +694,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1663453245
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663453244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 43
-  indentLevel: 0
-  storyText: teehee kthxbye
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &1663453246
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -736,7 +708,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 42
   indentLevel: 0
-  storyText: John the Ripper (password cracking software)
+  storyText: 'John the Ripper!!*
+
+    *(Open Source password cracking tool)'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -944,7 +918,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 249.58322
     y: 47.927116
-    width: 75
+    width: 76
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -961,7 +935,6 @@ MonoBehaviour:
   - {fileID: 1663453248}
   - {fileID: 1663453252}
   - {fileID: 1663453246}
-  - {fileID: 1663453245}
   - {fileID: 1663453247}
   - {fileID: 1663453259}
   suppressAllAutoSelections: 0
@@ -978,7 +951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 161.41678, y: 143.07288}
+  scrollPos: {x: -47.58322, y: 109.07288}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 622
@@ -991,7 +964,8 @@ MonoBehaviour:
     height: 939.1903
   selectedBlocks:
   - {fileID: 1663453255}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1663453247}
   variables: []
   description: 'This scene shows how to create simple parallax scrolling effects
 
@@ -1043,7 +1017,7 @@ MonoBehaviour:
   rotTweenType: 4
 --- !u!114 &1663453259
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

@@ -15,7 +15,6 @@ public class PasswordController1 : MonoBehaviour
     public GameObject inputField;
     public TMP_InputField inputFieldElement;
     private bool isStrongPwd;
-    public TMP_Text errMsg;
     public GameObject mainDoor;
     public GameObject[] door;
     public Animator[] gateAnim;
@@ -24,19 +23,20 @@ public class PasswordController1 : MonoBehaviour
     private int machineNumber;
     public GameObject endGameWin;
     public GameObject timeControl;
-    private List<string> list;
+    // private List<string> list;
     private string path;
     private bool isSet;
     [SerializeField] private GameObject ladder;
+    [SerializeField] private GameObject successfulLogin;
+    [SerializeField] private GameObject tryAgain;
 
     public void Start() {
-        isSet = true;
+        isStrongPwd = false;
     }
 
      public void ReadStringInput(string s)
     {
         password = s;
-        errMsg.text ="";
         Debug.Log("password logged in:"+password);
     }
 
@@ -44,28 +44,31 @@ public class PasswordController1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return)) 
         {
-            path = Application.dataPath + "/passwordLog.txt";
-            if(File.Exists(path))
-            {
-                Debug.Log("did i get here!!!!!!!");
-                list = File.ReadLines(path).ToList();
-                Debug.Log("Successful turn into list");
+            // path = Application.persistentDataPath + "/passwordLog.txt";
+            // if(File.Exists(path))
+            // {
+            //     Debug.Log("did i get here!!!!!!!");
+            //     list = File.ReadLines(path).ToList();
+            //     Debug.Log("Successful turn into list");
+            // }
+            // else
+            // {
+            //     Debug.Log("there is no path");
+            // }
+            for (int i=0;i<PasswordController.list.Count;i++){
+                Debug.Log("did my list come over"+PasswordController.list[i]);
             }
-            else
-            {
-                Debug.Log("there is no path");
-            }
-            if(list.Contains(password))
+            if(PasswordController.list.Contains(password))
             {
                 inputFieldElement.image.color = Color.green;
-                errMsg.color = Color.green;
-                errMsg.text = "That is the correct password. Successful login.";
+                setTextActive(1);
                 isStrongPwd = true;
             }  
             else
             {
                 inputFieldElement.image.color = Color.red;
-                errMsg.text = "Incorrect password. Try again.";
+                setTextActive(2);
+                isStrongPwd = false;
             }
         }
         if (Input.GetKeyUp(KeyCode.Return)) 
@@ -216,11 +219,23 @@ public class PasswordController1 : MonoBehaviour
     {
         pwdInputField.SetActive(true);
         inputField.SetActive(true);
-        errMsg.text ="";
-        errMsg.color = Color.white;
         inputFieldElement.ActivateInputField();
         inputFieldElement.text ="";
         isStrongPwd = false;
+    }
+
+    private void setTextActive(int option)
+    {
+        switch(option){
+            case 1:
+                successfulLogin.SetActive(true);
+                tryAgain.SetActive(false);
+                break;
+            case 2:
+                successfulLogin.SetActive(false);
+                tryAgain.SetActive(true);
+                break;
+        }
     }
 }
 

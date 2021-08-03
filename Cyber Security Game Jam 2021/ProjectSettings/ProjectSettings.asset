@@ -550,7 +550,7 @@ PlayerSettings:
     4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     13: UNITY_TEMPLATE_PLATFORMER
-    14: MOBILE_INPUT
+    14: MOBILE_INPUT;UNITY_TEMPLATE_PLATFORMER
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}

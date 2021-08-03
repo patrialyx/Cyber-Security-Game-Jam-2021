@@ -10,7 +10,7 @@ using System.Linq;
 using UnityEngine.SceneManagement;
 public class PasswordController2 : MonoBehaviour
 {
-    public static PasswordController instance;
+    
     [SerializeField]
     public TMP_Text placeholder;
     private string password;
@@ -54,12 +54,12 @@ public class PasswordController2 : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return)) 
             {
                 Regex rgx = new Regex("[^A-Za-z0-9]");
-                path = Application.dataPath + "/passwordLog.txt";
+                path = Application.persistentDataPath + "/passwordLog.txt";
                 if(!File.Exists(path))
                 {
                     File.WriteAllText(path, ""); //create the file
                 }
-                Debug.Log("Application Data Path where - "+Application.dataPath);
+                Debug.Log("Application Data Path where - "+Application.persistentDataPath);
                 list = File.ReadLines(path).ToList();
                     // hash = new HashSet < string > (list);
                 if (password.Length >= 8)
@@ -75,14 +75,14 @@ public class PasswordController2 : MonoBehaviour
                                     if(!list.Contains(password))
                                     {
                                         Debug.Log("so it reach here");
-                                        inputFieldElement.image.color = Color.green;
+                                        // inputFieldElement.image.color = Color.green;
                                         errMsg.color = Color.green;
                                         errMsg.text = "You have successfully set the password.";
                                         isStrongPwd = true;
                                     }
                                     else
                                     {
-                                        inputFieldElement.image.color = Color.red;
+                                        // inputFieldElement.image.color = Color.red;
                                         errMsg.text = "This password matches the password on another machine. Please use unique passwords!";
                                         isStrongPwd = false;
                                         Debug.Log("unique");
@@ -215,7 +215,7 @@ public class PasswordController2 : MonoBehaviour
             Debug.Log("iSetValue in update else: "+isSet.ToString());
             if (Input.GetKeyDown(KeyCode.Return)) 
             {
-                path = Application.dataPath + "/passwordLog.txt";
+                path = Application.persistentDataPath + "/passwordLog.txt";
                 if(File.Exists(path))
                 {
                     list = File.ReadLines(path).ToList();
